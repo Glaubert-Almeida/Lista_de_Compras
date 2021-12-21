@@ -1,0 +1,45 @@
+
+body {
+    background-color: rgb(230, 223, 212);
+}
+
+header {
+    margin-bottom: 1rem;
+}
+
+.container {
+    min-width: 1200px;
+    text-align: center;
+}
+
+.itens {
+    padding-left: 3rem;
+}
+
+table {
+    text-align: center;
+    align-items: center;
+}
+
+th, td {
+    text-align: center;
+    align-items: center;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.527);
+    text-align: center;
+    font-size: 2.6rem;
+}
+
+.btn {
+    background-color: rgb(48, 145, 184);
+}
+
+.btn-limpar {
+    background-color: darkred;
+}
+
+input::placeholder {
+    color: rgb(24, 5, 5);
+  }

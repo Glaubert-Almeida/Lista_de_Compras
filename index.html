@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Lista de Compras</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- importa o css do fontawesome (biblioteca de icone) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Meu css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- importa o css do animate (biblioteca de animacao) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
+  <script src="js/app.js" defer></script>
+
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Minhas Compras</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Cadastre o item</h2>
+      <br>
+      <div class="row">
+        <div class="col s4">
+      <div class="row featurette" id="boxCadastro">
+
+        <input type="hidden" id="idProduto" name="idProduto" value="" />
+        <div class="col-3">
+          <div class="input-group">
+            <input type="text" class="form-control" id="produto" placeholder="Produto" required>
+          </div>
+        </div>
+        <div class="col-2">
+            <div class="input-group">
+              <input type="number" class="form-control" id="valor" placeholder="Valor (R$)" min="0" required>
+            </div>
+        </div>
+        <div class="col-2">
+          <div class="input-group">
+            <input type="number" class="form-control" id="qtde" placeholder="Quantidade" min="1" required>
+          </div>
+        </div>
+        <div class="col-2">
+          <button class="w-100 btn btn-success" id="novo" type="button">Cadastrar</button>
+        </div>
+      </div>
+
+     
+    </div>
+    <div class="col s8 m7">
+
+      <div class="itens">
+      
+
+      <div class="row featurette">
+        <table class="table table-hover table-bordered ">
+          <thead>
+            <tr>
+              <th scope="col">ITEM</th>
+              <th scope="col">PREÇO (R$)</th>
+              <th scope="col">UNIDADES</th>
+              <th scope="col">TOTAL ITENS (R$)</th>
+            </tr>
+          </thead>
+          <tbody id="listaProdutos">
+            <tr>
+              <td colspan="5" class="text-center">Não há itens na lista...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="w-100 btn btn-success btn-limpar" id="limparLista">Limpar lista</button>
+    </div>
+  </div>
+
+    </div>
+    
+    
+    </div>
+
+  </main>
+</body>
+
+</html>
